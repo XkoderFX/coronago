@@ -1,0 +1,55 @@
+@use '/scss/vars.scss' as *;
+
+.header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  &__container {
+    display: flex;
+    min-height: 114px;
+    align-items: center;
+    @media (max-width: $tablet) {
+      min-height: 80px;
+    }
+  }
+  &__menu {
+    flex: 1 1 auto;
+  }
+  &__button {
+    flex: 0 0 252px;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: $tablet) {
+      flex: 0 0 150px;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 40px;
+    @media (max-width: $tablet) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    color: black;
+    font-family: Raleway;
+    text-transform: uppercase;
+    line-height: calc(12 / 10 * 100%);
+    letter-spacing: 0.2em;
+    font-size: 12px;
+    @media (max-width: $tablet) {
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+// imports
+@use '/scss/reset.scss';
+@use '/scss/vars.scss' as *;
+@use '/scss/ui.scss';
+@use '/scss/header.scss';
+
+// container
+[class*='_container'] {
+  max-width: calc($containerWidth + 15px); // container width + limit gaps
+  margin: 0 auto;
+  padding: 0px 15px; // limit gaps
+  @media (max-width: $desktop) {
+    max-width: 970px;
+  }
+  @media (max-width: $tablet) {
+    max-width: 750px;
+  }
+  @media (max-width: $mobile) {
+    max-width: none;
+  }
+}
+
+// wrapper
+.wrapper {
+  font-family: 'Rubik';
+  font-weight: bold;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+// constructions
+.main {
+  flex: 1 1 auto;
+}
