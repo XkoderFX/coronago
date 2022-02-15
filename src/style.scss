@@ -10,7 +10,9 @@
 [class*='_container'] {
   max-width: calc($containerWidth + 15px); // container width + limit gaps
   margin: 0 auto;
-  padding: 0px 15px; // limit gaps
+  padding-left: 15px; // limit gaps
+  padding-right: 15px; // limit gaps
+
   @media (max-width: $desktop) {
     max-width: 970px;
   }

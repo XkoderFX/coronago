@@ -1,26 +1,55 @@
 @use '/scss/vars.scss' as *;
 
 .get-started {
-  padding-top: 40px;
   background-color: #fafbfd;
 
   &__container {
+    padding-top: 40px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100vw;
+      height: 100%;
+      right: 252px;
+      top: 0;
+      transform: translate(100%, 0);
+      background-color: $primaryColor;
+      border-radius: 0px 0px 0px 30px;
+      @media (max-width: $tablet) {
+        right: 170px;
+      }
+      @media screen and (max-width: $mobile) {
+        display: none;
+      }
+    }
   }
 
   &__content {
     flex: 0 1 45%;
     padding-left: 20px;
+
+    @media screen and (max-width: $mobile) {
+      flex: 1 1 100%;
+    }
   }
 
   &__image {
+    position: relative;
+    z-index: 8;
     flex: 0 1 55%;
     img {
       max-width: 100%;
     }
     padding-right: 20px;
+    @media screen and (max-width: $mobile) {
+      flex: 1 1 100%;
+      text-align: center;
+    }
   }
 
   &__content-block {
