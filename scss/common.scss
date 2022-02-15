@@ -1,0 +1,34 @@
+@use '/scss/vars.scss' as *;
+
+.content-block {
+  &__title {
+    color: black;
+    font-size: 44px;
+    line-height: 126%;
+    font-weight: bold;
+
+    &:not(:last-child) {
+      // if it is the last child margin is unnecessary
+      margin-bottom: 12px;
+    }
+
+    strong {
+      color: $primaryColor;
+    }
+
+    strong.blue {
+      color: $secondaryColor;
+    }
+  }
+
+  &__text {
+    line-height: 138%;
+    color: $textColor;
+    font-weight: 400;
+
+    &:not(:last-child) {
+      // if it is the last child margin is unnecessary
+      margin-bottom: 24px;
+    }
+  }
+}
