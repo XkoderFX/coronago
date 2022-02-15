@@ -92,6 +92,15 @@
     @media (min-width: $tablet) {
       margin-right: 40px;
     }
+
+    &:hover {
+      .menu__link {
+        transition: all 0.3s ease 0s;
+
+        color: $primaryColor;
+        font-size: 14px;
+      }
+    }
   }
 
   &__link {
@@ -101,6 +110,7 @@
     line-height: calc(12 / 10 * 100%);
     letter-spacing: 0.2em;
     font-size: 12px;
+    transition: all 0.3s ease 0s;
   }
 
   &__icon {
