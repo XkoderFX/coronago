@@ -14,6 +14,14 @@
       min-height: 80px;
     }
   }
+  &__logo {
+    @media (max-width: $smMobile) {
+      flex: 0 0 35px;
+      overflow: hidden;
+    }
+    position: relative;
+    z-index: 6;
+  }
   &__menu {
     flex: 1 1 auto;
   }
@@ -21,6 +29,8 @@
     flex: 0 0 252px;
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+
     @media (max-width: $tablet) {
       flex: 0 0 150px;
     }
@@ -30,14 +40,57 @@
 .menu {
   display: flex;
   justify-content: flex-end;
+
+  &__body {
+    @media (max-width: $tablet) {
+      position: fixed;
+      top: 80px; // header height
+      right: 30px;
+      width: 100%;
+      background-color: $primaryColor;
+      padding: 40px 15px 30px 15px;
+      transition: all 0.3s ease 0s;
+      transform-origin: top right;
+      transform: scale(0);
+    }
+
+    .menu__list {
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    .menu__item {
+      @media (max-width: $tablet) {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+
+    .menu__link {
+      @media (max-width: $tablet) {
+        font-size: 10px;
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+
+    &.active {
+      @media (max-width: $tablet) {
+        transform: scale(1);
+        right: 0;
+      }
+    }
+  }
+
   &__list {
     display: flex;
   }
 
   &__item {
-    margin-right: 40px;
-    @media (max-width: $tablet) {
-      margin-right: 30px;
+    @media (min-width: $tablet) {
+      margin-right: 40px;
     }
   }
 
@@ -48,8 +101,9 @@
     line-height: calc(12 / 10 * 100%);
     letter-spacing: 0.2em;
     font-size: 12px;
-    @media (max-width: $tablet) {
-      font-size: 10px;
-    }
+  }
+
+  &__icon {
+    margin-left: 30px;
   }
 }
