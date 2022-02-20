@@ -5,7 +5,7 @@
 @use '/scss/header.scss';
 @use '/scss/get-started.scss';
 @use '/scss/stay-safe.scss';
-
+@use '/scss/experts.scss';
 // container
 [class*='_container'] {
   max-width: calc($containerWidth + 15px); // container width + limit gaps

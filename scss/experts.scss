@@ -1,0 +1,82 @@
+@use '/scss/vars.scss' as *;
+
+.experts {
+  padding: 53px 0px 116px 0px;
+  &__container {
+  }
+
+  &__statistics {
+  }
+}
+.statistics {
+  max-width: 655px;
+  margin: 0px auto;
+  position: relative;
+
+  &__wrapper {
+  }
+
+  &__body {
+    background-color: #fafbfd;
+    box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
+    border-radius: 16px;
+    position: relative;
+    z-index: 6;
+  }
+
+  &__decor {
+    position: absolute;
+    background-color: $primaryColor;
+    border-radius: 30px;
+    &_1 {
+      width: 65px;
+      height: 65px;
+      bottom: -21px;
+      left: -21px;
+      transform: rotate(-30deg);
+      z-index: 2;
+      border-radius: 16px;
+    }
+
+    &_2 {
+      width: 97px;
+      height: 97px;
+      right: 50%;
+      top: -40px;
+      transform: rotate(-30deg);
+    }
+
+    &_3 {
+      width: 128px;
+      height: 128px;
+      transform: rotate(30deg);
+      right: -60px;
+      top: -10px;
+    }
+  }
+}
+.body-statistics {
+  padding: 20px 80px;
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-items: center;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__value {
+    font-size: 36px;
+    line-height: 1.2;
+    color: $primaryColor;
+    letter-spacing: 0.14em;
+  }
+
+  &__text {
+    font-size: 13px;
+    text-transform: uppercase;
+  }
+}
