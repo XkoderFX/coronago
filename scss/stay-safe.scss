@@ -37,7 +37,8 @@
     position: relative;
     max-width: 100%;
     z-index: 5;
-    &::after { // shadow
+    &::after {
+      // shadow
       content: '';
       position: absolute;
       bottom: -12px;
