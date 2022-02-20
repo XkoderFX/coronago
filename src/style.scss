@@ -1,10 +1,10 @@
-// imports
 @use '/scss/reset.scss';
 @use '/scss/vars.scss' as *;
 @use '/scss/ui.scss';
 @use '/scss/common.scss';
 @use '/scss/header.scss';
 @use '/scss/get-started.scss';
+@use '/scss/stay-safe.scss';
 
 // container
 [class*='_container'] {
