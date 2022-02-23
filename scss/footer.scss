@@ -1,0 +1,14 @@
+.footer {
+  &__container {
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  &__item {
+  }
+}

@@ -6,6 +6,9 @@
 @use '/scss/get-started.scss';
 @use '/scss/stay-safe.scss';
 @use '/scss/experts.scss';
+@use '/scss/healthcare.scss';
+@use '/scss/footer.scss';
+
 // container
 [class*='_container'] {
   max-width: calc($containerWidth + 15px); // container width + limit gaps

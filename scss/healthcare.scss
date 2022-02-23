@@ -1,0 +1,106 @@
+@use '/scss/vars.scss' as *;
+
+.healthcare {
+  margin-bottom: 80px;
+
+  &__content {
+    margin-bottom: 45px;
+  }
+
+  &__items {
+    margin: 0 40px 0 40px;
+    display: flex;
+    gap: 65px;
+    @media screen and (max-width: $desktop) {
+      gap: 30px;
+    }
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 1 33.333%;
+  }
+}
+
+.item-healthcare {
+  background: #ffffff;
+  box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 35px 17px;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  &__icon {
+    margin: 50px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 138.5%;
+    margin-bottom: 4px;
+  }
+
+  &__text {
+    font-weight: 500;
+    color: $textColor;
+    line-height: 138.5%;
+  }
+
+  // decorations
+
+  &::before,
+  &:after,
+  &::before,
+  &:after,
+  &::before,
+  &:after {
+    content: '';
+    position: absolute;
+    background-color: $primaryColor;
+    z-index: -1;
+  }
+
+  &_1::before {
+    width: 65px;
+    height: 65px;
+    bottom: -35px;
+    left: -20px;
+    border-radius: 16px;
+    transform: rotate(-30deg);
+  }
+  &_1::after {
+    width: 96px;
+    height: 96px;
+    top: 40px;
+    right: -50px;
+    border-radius: 30px;
+    transform: rotate(-170deg);
+  }
+
+  &_2::after {
+    width: 125px;
+    height: 125px;
+    bottom: -40px;
+    right: -70px;
+    border-radius: 30px;
+    transform: rotate(60deg);
+  }
+
+  &_3::after {
+    width: 65px;
+    height: 65px;
+    top: -20px;
+    right: -20px;
+    border-radius: 16px;
+    transform: rotate(45deg);
+    @media screen and (max-width: $mobile) {
+      top: calc(100% - 20px);
+      left: -20px;
+    }
+  }
+}

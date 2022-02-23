@@ -1,6 +1,10 @@
 @use '/scss/vars.scss' as *;
 
 .content-block {
+  &_center {
+    text-align: center;
+  }
+
   &__title {
     color: black;
     font-size: 44px;
@@ -25,7 +29,10 @@
     line-height: 138%;
     color: $textColor;
     font-weight: 400;
-
+    &_maxw {
+      max-width: 600px;
+      margin: 0 auto;
+    }
     &:not(:last-child) {
       // if it is the last child margin is unnecessary
       margin-bottom: 24px;
