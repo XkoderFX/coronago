@@ -27,6 +27,11 @@
   }
 }
 
+:not(img)::selection {
+  background-color: $primaryColor;
+  color: white;
+}
+
 // wrapper
 .wrapper {
   font-family: 'Rubik';
